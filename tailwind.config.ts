@@ -66,13 +66,24 @@ export default {
 					start: 'hsl(var(--purple-gradient-start))',
 					end: 'hsl(var(--purple-gradient-end))'
 				},
+				'blue-gradient': {
+					start: 'hsl(var(--blue-gradient-start))',
+					end: 'hsl(var(--blue-gradient-end))'
+				},
 				'hero-bg': 'hsl(var(--hero-bg))',
 				'section-bg': 'hsl(var(--section-bg))',
+				'glass-bg': 'hsl(var(--glass-bg))',
+				'glass-border': 'hsl(var(--glass-border))',
+				'accent-glow': 'hsl(var(--accent-glow))',
 				'text-muted': 'hsl(var(--text-muted))'
 			},
 			backgroundImage: {
 				'purple-gradient': 'linear-gradient(135deg, hsl(var(--purple-gradient-start)), hsl(var(--purple-gradient-end)))',
-				'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-bg)), hsl(var(--section-bg)))'
+				'blue-gradient': 'linear-gradient(135deg, hsl(var(--blue-gradient-start)), hsl(var(--blue-gradient-end)))',
+				'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-bg)), hsl(var(--section-bg)))',
+				'glass-gradient': 'linear-gradient(135deg, hsl(var(--glass-bg) / 0.8), hsl(var(--glass-bg) / 0.9))',
+				'modern-gradient': 'linear-gradient(135deg, hsl(var(--purple-gradient-start)), hsl(var(--blue-gradient-end)))',
+				'glow-gradient': 'radial-gradient(circle at center, hsl(var(--accent-glow) / 0.1), transparent 70%)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

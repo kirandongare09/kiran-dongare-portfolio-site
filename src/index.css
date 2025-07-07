@@ -38,12 +38,24 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Custom portfolio colors */
-    --purple-gradient-start: 263 75% 60%;
-    --purple-gradient-end: 280 70% 70%;
-    --hero-bg: 263 75% 98%;
-    --section-bg: 0 0% 98%;
+    /* Modern portfolio colors */
+    --purple-gradient-start: 270 85% 65%;
+    --purple-gradient-end: 310 75% 70%;
+    --blue-gradient-start: 220 85% 65%;
+    --blue-gradient-end: 260 75% 70%;
+    --hero-bg: 270 100% 99%;
+    --section-bg: 220 50% 98%;
+    --glass-bg: 0 0% 100%;
+    --glass-border: 220 30% 90%;
+    --accent-glow: 270 85% 65%;
     --text-muted: 220 8.9% 46.1%;
+    
+    /* Enhanced shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(220 30% 5% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(220 30% 5% / 0.1), 0 2px 4px -1px hsl(220 30% 5% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 30% 5% / 0.1), 0 4px 6px -2px hsl(220 30% 5% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 30% 5% / 0.1), 0 10px 10px -5px hsl(220 30% 5% / 0.04);
+    --shadow-glow: 0 0 30px hsl(var(--accent-glow) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,12 +103,24 @@ All colors MUST be HSL.
     --input: 220 13% 15%;
     --ring: 263 75% 60%;
     
-    /* Custom dark mode colors */
-    --purple-gradient-start: 263 75% 55%;
-    --purple-gradient-end: 280 70% 65%;
-    --hero-bg: 220 13% 8%;
-    --section-bg: 220 13% 6%;
+    /* Modern dark mode colors */
+    --purple-gradient-start: 270 85% 60%;
+    --purple-gradient-end: 310 75% 65%;
+    --blue-gradient-start: 220 85% 60%;
+    --blue-gradient-end: 260 75% 65%;
+    --hero-bg: 220 13% 7%;
+    --section-bg: 220 13% 5%;
+    --glass-bg: 220 13% 8%;
+    --glass-border: 220 30% 15%;
+    --accent-glow: 270 85% 60%;
     --text-muted: 215 20.2% 65.1%;
+    
+    /* Enhanced dark shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(220 30% 5% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(220 30% 5% / 0.3), 0 2px 4px -1px hsl(220 30% 5% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(220 30% 5% / 0.3), 0 4px 6px -2px hsl(220 30% 5% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(220 30% 5% / 0.4), 0 10px 10px -5px hsl(220 30% 5% / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--accent-glow) / 0.4);
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
