@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'purple-gradient': {
+					start: 'hsl(var(--purple-gradient-start))',
+					end: 'hsl(var(--purple-gradient-end))'
+				},
+				'hero-bg': 'hsl(var(--hero-bg))',
+				'section-bg': 'hsl(var(--section-bg))',
+				'text-muted': 'hsl(var(--text-muted))'
+			},
+			backgroundImage: {
+				'purple-gradient': 'linear-gradient(135deg, hsl(var(--purple-gradient-start)), hsl(var(--purple-gradient-end)))',
+				'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-bg)), hsl(var(--section-bg)))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
