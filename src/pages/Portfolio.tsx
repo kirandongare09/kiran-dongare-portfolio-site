@@ -137,25 +137,44 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section id="skills" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-glow-gradient opacity-30"></div>
+        <div className="absolute top-20 left-1/4 w-32 h-32 bg-purple-gradient rounded-full opacity-20 blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-40 h-40 bg-blue-gradient rounded-full opacity-20 blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Skills & <span className="bg-modern-gradient bg-clip-text text-transparent">Technologies</span>
           </h2>
           <div className="max-w-7xl mx-auto">
-            <div className="grid gap-8 mb-16">
-              {Object.entries(skills).map(([category, skillList]) => (
-                <Card key={category} className="bg-glass-gradient backdrop-blur-sm border border-glass-border/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
-                  <CardHeader>
-                    <CardTitle className="text-2xl bg-purple-gradient bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+            <div className="grid gap-6 mb-16">
+              {Object.entries(skills).map(([category, skillList], index) => (
+                <Card key={category} className="bg-glass-gradient backdrop-blur-md border border-glass-border/40 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden"
+                  style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="absolute inset-0 bg-purple-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-2xl bg-purple-gradient bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 flex items-center gap-3">
+                      <div className="w-8 h-8 bg-purple-gradient rounded-lg flex items-center justify-center shadow-lg">
+                        <span className="text-white text-sm font-bold">
+                          {category.split(' ').map(word => word[0]).join('').slice(0, 2)}
+                        </span>
+                      </div>
                       {category}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex flex-wrap gap-3">
-                      {skillList.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-sm px-4 py-2 bg-primary/10 hover:bg-primary/20 transition-colors duration-200 border border-primary/20">
-                          {skill}
-                        </Badge>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                      {skillList.map((skill, skillIndex) => (
+                        <div
+                          key={skill}
+                          className="group/skill relative"
+                          style={{ animationDelay: `${(index * 100) + (skillIndex * 50)}ms` }}
+                        >
+                          <Badge 
+                            variant="secondary" 
+                            className="w-full justify-center text-sm px-4 py-3 bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 transition-all duration-300 border border-primary/20 hover:border-primary/40 group-hover/skill:scale-105 group-hover/skill:shadow-lg cursor-pointer relative overflow-hidden"
+                          >
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-gradient-start to-blue-gradient-end opacity-0 group-hover/skill:opacity-10 transition-opacity duration-300"></div>
+                            <span className="relative z-10 font-medium">{skill}</span>
+                          </Badge>
+                        </div>
                       ))}
                     </div>
                   </CardContent>
