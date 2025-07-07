@@ -2,19 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
-import profileImage from "@/assets/profile-image.jpg";
+import profileImage from "@/assets/profile-image2.jpg";
+import resume from "@/assets/resume.pdf";
 
 export default function Portfolio() {
   const skills = {
-    "Programming Language": ["Java"],
     "Web Technologies": ["JavaScript", "TypeScript", "Angular 2+", "ReactJS", "HTML", "CSS", "RESTful APIs", "jQuery", "AJAX", "JSON", "Swagger"],
     "Reactive Programming": ["Redux", "RxJS", "NgRx"],
     "Responsive Design": ["Bootstrap", "Angular Material", "PrimeNG"],
     "Version Control": ["Git", "GitHub", "GitLab", "AppEngine"],
     "Development Environment": ["Agile methodology"],
     "Issue Tracking": ["Jira", "Buganizer"],
-    "Testing": ["Karma", "Jasmine", "regression/manual testing", "TestTracker Tool"],
-    "Deployment": ["Docker"]
+    "Testing": ["Karma", "Jasmine", "regression/manual testing", "TestTracker Tool"]
   };
 
   const competencies = [
@@ -25,26 +24,26 @@ export default function Portfolio() {
 
   const certifications = [
     "Certified MEAN Developer – Accenture",
-    "Meta's Front-End Certification",
-    "Meta's Basic React Certification",
-    "Meta's Programming with JavaScript Certification"
+    "Front-End Certification - Meta",
+    "Basic React Certification - Meta",
+    "Programming with JavaScript Certification - Meta"
   ];
 
   const projects = [
     {
       title: "E-Commerce App",
       description: "Full-fledged telecom product purchasing platform",
-      technologies: ["Angular", "TypeScript", "HTML", "CSS", "RESTful APIs"]
+      technologies: ["Angular 8", "TypeScript", "HTML", "CSS", "RESTful APIs", "Bootstrap", "Gitlab", "Jira", "PrimeNG"]
     },
     {
       title: "Legal Management App",
       description: "Case tracking and management for legal affairs",
-      technologies: ["Angular", "NgRx", "Angular Material", "Git"]
+      technologies: ["Angular 2+", "JavaScript", "NgRx", "Angular Material", "Git", ]
     },
     {
       title: "Child Welfare App",
       description: "Financial aid tracking platform for government child welfare programs",
-      technologies: ["Angular", "RxJS", "Bootstrap", "Jira"]
+      technologies: ["Angular 18", "RxJS", "Bootstrap", "BugZilla", "BitBucket", "Accessibility", "SAST"]
     }
   ];
 
@@ -64,7 +63,7 @@ export default function Portfolio() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 space-y-8">
                   <div className="space-y-2">
-                    <p className="text-muted-foreground text-lg font-medium">Hey, I'm Kiran 👋</p>
+                    <p className="text-muted-foreground text-lg font-medium">Hey, I'm Kiran</p>
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                       <span className="bg-modern-gradient bg-clip-text text-transparent">Front</span>end
                       <br />
@@ -74,14 +73,19 @@ export default function Portfolio() {
                   </div>
                   
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Highly skilled and meticulous Front-End Developer with <span className="text-primary font-semibold">3.8 years</span> of experience 
+                    Highly skilled and meticulous Front-End Developer with <span className="text-primary font-semibold">3.5+ years</span> of experience 
                     in creating innovative and user-friendly websites. Proficient in Angular, JavaScript, 
                     HTML, CSS, RESTful APIs, responsive design, Git, and agile development.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-6">
                     <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+                    <a
+                      href={resume}
+                      download="Kiran_Dongare_Resume.pdf"
+                    >
                       Download Resume
+                    </a>
                     </Button>
                     <Button 
                       variant="glass" 
@@ -116,7 +120,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-section-bg relative overflow-hidden">
+      <section id="about" className="pb-20 bg-section-bg relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-gradient rounded-full opacity-5 blur-3xl"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -146,7 +150,7 @@ export default function Portfolio() {
           <div className="max-w-7xl mx-auto">
             <div className="grid gap-6 mb-16">
               {Object.entries(skills).map(([category, skillList], index) => (
-                <Card key={category} className="bg-glass-gradient backdrop-blur-md border border-glass-border/40 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden"
+                <Card key={category} className="bg-glass-gradient backdrop-blur-md border border-glass-border/40 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] transform group relative overflow-visible"
                   style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="absolute inset-0 bg-purple-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
                   <CardHeader className="pb-4">
@@ -241,11 +245,11 @@ export default function Portfolio() {
             Professional <span className="bg-blue-gradient bg-clip-text text-transparent">Experience</span>
           </h2>
           <div className="max-w-5xl mx-auto">
-            <Card className="bg-glass-gradient backdrop-blur-sm border border-glass-border/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-glass-gradient backdrop-blur-sm border border-glass-border/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
                   <div className="space-y-2">
-                    <CardTitle className="text-3xl bg-modern-gradient bg-clip-text text-transparent">Software Developer</CardTitle>
+                    <CardTitle className="text-3xl bg-modern-gradient bg-clip-text text-transparent">Sr. Software Developer</CardTitle>
                     <p className="text-xl font-semibold text-muted-foreground">Accenture Pvt. Ltd., Pune</p>
                   </div>
                   <Badge variant="outline" className="text-base px-4 py-2 border-primary/30 bg-primary/10">Oct 2021 – Present</Badge>
@@ -352,6 +356,11 @@ export default function Portfolio() {
                   Let's discuss how we can work together to create something amazing!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button asChild variant="glass" size="lg" className="text-lg px-8 py-4">
+                    <a>
+                    📞 + 91 9356521856
+                    </a>
+                  </Button>
                   <Button asChild variant="hero" size="lg" className="text-lg px-8 py-4">
                     <a href="mailto:kiran.dongare@example.com">
                       📧 Email Me
@@ -378,7 +387,7 @@ export default function Portfolio() {
       <footer className="py-12 border-t border-glass-border/30 bg-glass-gradient backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-lg">
-            © 2024 Kiran Ashok Dongare. All rights reserved.
+            © 2025 Kiran Ashok Dongare. All rights reserved.
           </p>
         </div>
       </footer>

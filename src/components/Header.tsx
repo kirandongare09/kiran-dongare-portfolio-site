@@ -28,7 +28,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-foreground">
-          Kiran<span className="text-primary">DCZ</span>
+          Kiran<span className="text-primary">UI</span>
         </div>
 
         {/* Desktop Navigation */}
