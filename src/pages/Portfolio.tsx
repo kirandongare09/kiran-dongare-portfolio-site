@@ -410,7 +410,7 @@ export default function Portfolio() {
                     </a>
                   </Button>
                   <Button asChild variant="hero" size="lg" className="text-lg px-8 py-4">
-                    <a href="mailto:kiran.dongare@example.com">
+                    <a href="mailto:dongarekiran8@gmail.com">
                       📧 Email Me
                     </a>
                   </Button>
