@@ -20,6 +20,7 @@ export function Header() {
     { name: "Projects", id: "projects" },
     { name: "Experience", id: "experience" },
     { name: "Certifications", id: "certifications" },
+    { name: "Awards", id: "awards" },
     { name: "Education", id: "education" },
     { name: "Contact", id: "contact" },
   ];

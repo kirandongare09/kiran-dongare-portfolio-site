@@ -4,16 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
 import profileImage from "@/assets/profile-image2.jpg";
 import resume from "@/assets/resume.pdf";
+import react from "@/assets/react.pdf";
+import frontend from "@/assets/frontend.pdf";
+import award from "@/assets/award.pdf";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const skills = {
-    "Web Technologies": ["JavaScript", "TypeScript", "Angular 2+", "ReactJS", "HTML", "CSS", "RESTful APIs", "jQuery", "AJAX", "JSON", "Swagger"],
+    "Web Technologies": ["JavaScript", "TypeScript", "Angular 2+", "ReactJS", "HTML", "CSS", "RESTful APIs", "JSON", "Swagger"],
     "Reactive Programming": ["Redux", "RxJS", "NgRx"],
     "Responsive Design": ["Bootstrap", "Angular Material", "PrimeNG"],
     "Version Control": ["Git", "GitHub", "GitLab", "AppEngine"],
     "Development Environment": ["Agile methodology"],
     "Issue Tracking": ["Jira", "Buganizer"],
-    "Testing": ["Karma", "Jasmine", "regression/manual testing", "TestTracker Tool"]
+    "Testing": ["Karma", "Jasmine", "regression/manual testing", "TestTracker Tool"],
+    "AI": ["Gen AI", "Prompt Engineering"]
   };
 
   const competencies = [
@@ -23,10 +28,13 @@ export default function Portfolio() {
   ];
 
   const certifications = [
-    "Certified MEAN Developer – Accenture",
-    "Front-End Certification - Meta",
-    "Basic React Certification - Meta",
-    "Programming with JavaScript Certification - Meta"
+    {name : "Certified Angular Developer – Accenture", link : '/unavailable'},
+    {name: "Programming with JavaScript Certification - Meta", link: '/unavailable'}
+  ];
+
+  const certifications2 = [
+    {name: "Front-End Certification - Meta", link: frontend},
+    {name: "Basic React Certification - Meta", link: react},
   ];
 
   const projects = [
@@ -296,6 +304,25 @@ export default function Portfolio() {
             <span className="bg-purple-gradient bg-clip-text text-transparent">Certifications</span>
           </h2>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          {certifications2.map((cert, index) => (
+              <Card key={index} className="bg-glass-gradient backdrop-blur-sm border border-glass-border/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 bg-purple-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-2xl">🏆</span>
+                    </div>
+                    <p className="font-semibold text-lg text-foreground leading-relaxed">
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                    >
+                      {cert.name} ↗️
+                    </a>
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
             {certifications.map((cert, index) => (
               <Card key={index} className="bg-glass-gradient backdrop-blur-sm border border-glass-border/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
                 <CardContent className="p-8">
@@ -303,7 +330,11 @@ export default function Portfolio() {
                     <div className="w-16 h-16 bg-purple-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <span className="text-white font-bold text-2xl">🏆</span>
                     </div>
-                    <p className="font-semibold text-lg text-foreground leading-relaxed">{cert}</p>
+                    <p className="font-semibold text-lg text-foreground leading-relaxed">
+                    <Link target="_blank" to="/unavailable">
+                      {cert.name} ↗️
+                    </Link>
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -311,6 +342,23 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* Award Section */}
+      <section id="awards" className="pb-20 bg-section-bg relative overflow-hidden">
+  <div className="absolute top-0 left-0 w-64 h-64 bg-purple-gradient rounded-full opacity-5 blur-3xl"></div>
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-5xl mx-auto text-center">
+      <h2 className="text-4xl md:text-5xl font-bold mb-12">
+        <span className="bg-blue-gradient bg-clip-text text-transparent">Awards</span>
+      </h2> 
+      <div className="bg-glass-gradient backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-glass-border/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+        <p className="text-xl text-muted-foreground leading-relaxed">
+          Honored to be recognized with the <span className="text-primary font-semibold"><a href={award} target="_blank">Accenture ACE Award ↗️</a></span> for outstanding performance and contribution in project delivery. This recognition reflects dedication to excellence, collaboration, and impactful development work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Education Section */}
       <section id="education" className="py-20 relative overflow-hidden">
