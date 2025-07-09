@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const skills = {
-    "Web Technologies": ["JavaScript", "TypeScript", "Angular 2+", "ReactJS", "HTML", "CSS", "RESTful APIs", "JSON", "Swagger"],
+    "Web Technologies": ["JavaScript", "TypeScript", "Angular 2+", "ReactJS", "HTML", "CSS", "RESTful APIs", "JSON", "Swagger", "Figma"],
     "Reactive Programming": ["Redux", "RxJS", "NgRx"],
     "Responsive Design": ["Bootstrap", "Angular Material", "PrimeNG"],
     "Version Control": ["Git", "GitHub", "GitLab", "AppEngine"],
